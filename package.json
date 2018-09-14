@@ -1,0 +1,38 @@
+{
+  "name": "backend-api",
+  "version": "0.0.1",
+  "description": "Backend support for angular application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch src --watch index.js --watch config index.js",
+    "test": "node test/api"
+  },
+  "author": "Navya HK <navya.k@openly.co>",
+  "license": "ISC",
+  "dependencies": {
+    "clean-stack": "1.3.0",
+    "colors": "1.1.2",
+    "config": "1.28.1",
+    "fs-extra": "5.0.0",
+    "handlebars": "4.0.11",
+    "http-delayed-response": "0.0.4",
+    "javascript-natural-sort": "^0.7.1",
+    "json-mask": "0.3.8",
+    "jsonwebtoken": "8.1.0",
+    "loadtest": "2.3.0",
+    "md5": "2.2.1",
+    "moment": "2.19.4",
+    "mongodb": "3.0.0-rc0",
+    "qs": "6.5.2",
+    "raven": "2.3.0",
+    "request": "2.83.0",
+    "restify": "6.3.4",
+    "restify-cors-middleware": "1.1.0",
+    "revalidator": "0.3.1",
+    "services":
+      "git+https://RaghavendhraK:raghug123@github.com/openly/services.git",
+    "shortid": "2.2.8",
+    "underscore": "1.8.3",
+    "validator": "9.2.0"
+  }
+}

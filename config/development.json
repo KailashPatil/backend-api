@@ -1,0 +1,10 @@
+{
+	"backend_api": {
+		"url": "http://localhost:3210",
+		"port": 3210,
+		"mongodb": "mongodb://localhost:27017/aw18-test"
+	},
+	"directory": {
+		"tmp": "/Users/navyahk/Workspace/clarks-data/tmp"
+	}
+}

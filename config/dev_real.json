@@ -1,0 +1,58 @@
+{
+  "clarks_api": {
+    "url": "http://localhost:3010",
+    "port": 3000
+  },
+  "app_users": {
+    "mongodb": "mongodb://localhost:27017/clarks-users-live"
+  },
+  "season": {
+    "development": {
+      "mongodb": "mongodb://localhost:27017/aw18-live-db",
+      "aws": {
+        "cdn_url": "https://d1ppg5x7ffiu8s.cloudfront.net",
+        "bucket_name": "for-only-test"
+      },
+      "service_app_url": "http://localhost:3016",
+      "admin_app_url": "http://localhost:3017"
+    }
+  },
+  "aws": {
+    "access_key_id": "AKIAJXJ27NMQBBN2R3HQ",
+    "secret_access_key": "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",
+    "region": "us-west-2",
+    "queue_urls": {
+      "export_list": {
+        "url":
+          "https://sqs.us-west-2.amazonaws.com/177157139912/dev-export-list.fifo",
+        "msg_group_id": "export-list",
+        "task_type": "small"
+      },
+      "image_import": {
+        "url":
+          "https://sqs.us-west-2.amazonaws.com/177157139912/dev-image-import.fifo",
+        "msg_group_id": "image-import",
+        "task_type": "large"
+      },
+      "publish_product": {
+        "url":
+          "https://sqs.us-west-2.amazonaws.com/177157139912/dev-publish-product.fifo",
+        "msg_group_id": "publish-product",
+        "task_type": "large"
+      }
+    }
+  },
+  "email": {
+    "from": "noreply@clarksapp.com",
+    "mailgun": {
+      "api_key": "key-6dt528vv4rg0q2y4893g-t5cjus52183",
+      "domain": "openly.co"
+    },
+    "admins": "raghu.k@openly.co"
+  },
+  "slack": {
+    "hook_url":
+      "https://hooks.slack.com/services/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",
+    "channel": "#raghu-test"
+  }
+}
