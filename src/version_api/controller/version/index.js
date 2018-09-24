@@ -12,10 +12,24 @@ class VersionCont extends Controller {
   }
   setupRoutes() {
     this.setupRoute("get", "/version", this.getVersion);
+    // this.setupRoute("get", "/version/:id", this.getVersionById);
+    this.setupRoute("get", "/version/kp", this.getVersionByName);
   }
 
   async getVersion(req, res, next) {
     res.json(200, { version: "0.01" });
+    return next();
+  }
+
+  async getVersionById(req, res, next) {
+    console.log(req.params);
+    res.json(200, { version: req.params.id});
+    return next();
+  }
+
+  async getVersionByName(req, res, next) {
+    console.log(req.params);
+    res.json(200, { version: req.params});
     return next();
   }
 }

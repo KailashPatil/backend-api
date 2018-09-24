@@ -1,6 +1,6 @@
 "use strict";
 
-const AuditLogUtil = require("./audit_log");
+// const AuditLogUtil = require("./audit_log");
 
 const ErrorUtil = {
   unknownMethodHandler: function(req, res, e, next) {
@@ -53,7 +53,7 @@ const ErrorUtil = {
     if (!res._headerSent) {
       res.send(code, errResponse);
     }
-    AuditLogUtil.log(req, res, e);
+    // AuditLogUtil.log(req, res, e);
   },
   handleException: function(req, res, e, next) {
     ErrorUtil.uncaughtException(req, res, null, e);
@@ -67,7 +67,7 @@ const ErrorUtil = {
     if (!res._headerSent) {
       res.send(code, errResponse);
     }
-    AuditLogUtil.log(req, res, e);
+    // AuditLogUtil.log(req, res, e);
   }
 };
 

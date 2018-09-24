@@ -44,6 +44,8 @@ const sanitizeMiddleware = require(srcDir + "/lib/sanitize").sanitizeMiddleware;
 restServer.use(sanitizeMiddleware());
 
 require(srcDir + "/version_api")(restServer);
+require(srcDir + "/list_api")(restServer);
+require(srcDir + "/count_api")(restServer);
 
 const ErrorHandler = require(srcDir + "/util/error_handler");
 restServer.on("MethodNotAllowed", ErrorHandler.unknownMethodHandler);
@@ -53,7 +55,7 @@ restServer.on("NotFound", ErrorHandler.notFound);
 
 restServer.listen(config.get("backend_api.port"), function() {
   Log.info(
-    "Clarks api listening at port " +
+    "Backend api listening at port " +
       config.get("backend_api.port") +
       " and url " +
       config.get("backend_api.url")

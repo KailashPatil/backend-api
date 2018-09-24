@@ -235,7 +235,7 @@ class Model {
       }
     });
   }
-
+  
   delete(filter) {
     return new Promise((resolve, reject) => {
       this.persistenceService
